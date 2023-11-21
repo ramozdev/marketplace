@@ -1,6 +1,5 @@
 import Button from "@/ui/html/button";
 import { CheckCircledIcon } from "@radix-ui/react-icons";
-import React from "react";
 
 interface CardProps {
   prop?: string;
@@ -8,13 +7,13 @@ interface CardProps {
 
 export default function Card({ prop }: CardProps) {
   return (
-    <div className="max-w-full rounded-lg">
-      <div className="w-72">
+    <div className="mx-auto rounded-lg">
+      <div className="h-auto w-72">
         <div className="h-full rounded-t-lg bg-sky-100">
           <img
             src={prop}
             alt="NFT"
-            className="rounded-t-lg bg-sky-100 object-contain"
+            className="object-fit rounded-t-lg bg-sky-100"
           />
         </div>
         <div className="space-y-3 p-3.5 font-semibold">

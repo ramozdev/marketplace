@@ -1,4 +1,5 @@
 import Card from "@/components/card";
+import Sidebar from "@/components/sidebar";
 import Button from "@/ui/html/button";
 import {
   EyeOpenIcon,
@@ -93,11 +94,13 @@ export default function HomePage() {
           </div>
         </div>
       </nav>
-
-      <div className="flex-center mx-auto grid max-w-screen-xl grid-cols-2 gap-4 md:grid-cols-4">
-        {images.map((card) => (
-          <Card key={card.id} prop={card.src} />
-        ))}
+      <div className="flex justify-between">
+        <Sidebar />
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {images.map((card) => (
+            <Card key={card.id} prop={card.src} />
+          ))}
+        </div>
       </div>
     </div>
   );
